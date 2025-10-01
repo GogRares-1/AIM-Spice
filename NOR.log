@@ -1,0 +1,64 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *         Professional Version 2020.100           *
+                 *                                           *
+                 *********************************************
+
+	Date: Tue Nov 19 11:54:08 2024
+	Circuit File: C:\Users\admin\OneDrive\Documents\NOR.cir
+	Analysis: DC Transfer Curves
+
+**************************  Circuit Description  **************************
+
+     1:  NOR
+     2:  !
+     3:  .model t nmos vto=2.5
+     4:  !
+     5:  VGG g 0 7.5
+     6:  VDD d 0 5
+     7:  VA a 0 DC 0
+     8:  VB b 0 DC 0
+     9:  !
+    10:  m1 out b 0 q t l=1u W=10u
+    11:  m2 out a 0 q t l=1u W=10u
+    12:  m3 d g OUT OUT t l=10u W=1u
+    13:  
+    14:  .dc VA 0 5 0.1
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Source name #1 .. : VA
+	Start value #1 .. : 0
+	End value #1 .... : 5
+	Increment value #1: 0.1
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations...........: 148
+	Total analysis time (sec)............: 0.012
+	Time spent in device loading (sec)...: 0.001
+	Time spent in L-U decomposition (sec): 0
+	Time spent in matrix reordering (sec): 0
+	Time spent in matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: NOR
+
+

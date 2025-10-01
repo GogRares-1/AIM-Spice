@@ -1,0 +1,32 @@
+[aimspice]
+[description]
+170
+NOR
+!
+.model t nmos vto=2.5
+!
+VGG g 0 7.5
+VDD d 0 5
+VA a 0 DC 0
+VB b 0 DC 0
+!
+m1 out b 0 q t l=1u W=10u
+m2 out a 0 q t l=1u W=10u
+m3 d g OUT OUT t l=10u W=1u
+
+[dc]
+1
+VA
+0
+5
+0.1
+[ana]
+1 1
+0
+1 1
+1 1 -1 6
+3
+v(a)
+v(b)
+v(out)
+[end]

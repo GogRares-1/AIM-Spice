@@ -1,0 +1,73 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *         Professional Version 2020.100           *
+                 *                                           *
+                 *********************************************
+
+	Date: Tue Oct 22 11:41:21 2024
+	Circuit File: C:\Users\admin\OneDrive\Documents\NoErrorAmplifier.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  Reaction regulator with no error amplifier 
+     2:  D1 a b DiodaSi
+     3:  R outr 0 100
+     4:  C b 0 1m
+     5:  D2 0 a DiodaSi
+     6:  D3 0 c DiodaSi
+     7:  D4 c b DiodaSi
+     8:  D5 0 z Zener
+     9:  R1 b z 220
+    10:  Q1 b z outr tranzistor
+    11:  
+    12:  .Model DiodaSi D tt = 1e-9
+    13:  .Model Zener D bv=5.6
+    14:  .Model tranzistor NPN tr=1e-9 tf=1e-9
+    15:  Vin a c DC 5 sin(0 10 50 0 0)
+    16:  
+    17:  .tran 1e-9 60e-3
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-9
+	Final time .......... : 60e-3
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 466
+	Number of iterations for transient analysis....: 434
+	Total number of timepoints.....................: 125
+	Number of timepoints accepted..................: 106
+	Number of timepoints rejected..................: 19
+	Total analysis time (sec)......................: 0.011
+	Transient analysis time (sec)..................: 0.005
+	Time spent in device loading (sec).............: 0.001
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: Reaction regulator with no error amplifier 
+
+

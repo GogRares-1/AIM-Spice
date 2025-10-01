@@ -1,0 +1,34 @@
+[aimspice]
+[description]
+263
+NAND
+!
+.model t1 nmos vto=1.5
+.model t2 nmos vto=2.5
+.model t3 nmos vto=2.5
+!
+VGG g 0 DC 7.5
+VDD d 0 DC 5
+VA a 0  DC 0 pulse(0 5 0 1e-10 1e-10 1e-9 2e-9)
+VB b 0  DC 5
+!
+m1 q b 0 0 t1 l=1u W=1u
+m2 out a q q t2 l=10u W=1u
+m3 d g OUT OUT t3 l=15u W=1u
+
+[dc]
+1
+VA
+0
+6
+0.1
+[ana]
+1 1
+0
+1 1
+1 1 -1 6
+3
+v(a)
+v(b)
+v(out)
+[end]

@@ -1,0 +1,42 @@
+[aimspice]
+[description]
+201
+TRANSIS
+R1 a b 1k
+R2 ec out 1k
+RB eb b 7k
+C1 a b 75p
+C2 out 0 1p
+Q1 out b 0 tranz
+.model tranz npn tr=5e-9 tf=8e-9
+Vin a 0 DC 0 pulse(0 5 0 1e-9 1e-9 1e-7 2e-7)
+VE ec 0 DC 5v
+VB eb b DC -1V
+
+[dc]
+1
+Vin
+0
+5
+0.1
+[tran]
+1e-9
+6e-7
+X
+X
+0
+[ana]
+4 2
+0
+1 1
+1 1 0 6
+2
+v(a)
+v(out)
+0
+1 1
+1 1 -4 6
+2
+v(a)
+v(out)
+[end]

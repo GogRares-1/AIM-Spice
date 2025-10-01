@@ -1,0 +1,62 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *         Professional Version 2020.100           *
+                 *                                           *
+                 *********************************************
+
+	Date: Tue Oct  8 11:08:44 2024
+	Circuit File: C:\Users\admin\OneDrive\Documents\HighPass.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  High-Pass Circuit
+     2:  C1 a b 470n
+     3:  R1 b 0 1k
+     4:  !Vin a 0 DC 5 sin(0 5 1k 0 0)
+     5:  Vin a 0 DC 5 pulse(0 5 0 0 0 1e-3 2e-3)
+     6:  .tran 1e-9 6e-3
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-9
+	Final time .......... : 6e-3
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 157
+	Number of iterations for transient analysis....: 154
+	Total number of timepoints.....................: 78
+	Number of timepoints accepted..................: 77
+	Number of timepoints rejected..................: 1
+	Total analysis time (sec)......................: 0.01
+	Transient analysis time (sec)..................: 0.006
+	Time spent in device loading (sec).............: 0
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: High-Pass Circuit
+
+

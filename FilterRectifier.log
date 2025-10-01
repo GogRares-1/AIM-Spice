@@ -1,0 +1,67 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *         Professional Version 2020.100           *
+                 *                                           *
+                 *********************************************
+
+	Date: Mon Nov  4 18:12:43 2024
+	Circuit File: C:\Users\admin\OneDrive\Documents\FilterRectifier.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  Filter rectifier
+     2:  D1 a b DiodaSi
+     3:  R b 0 100
+     4:  C b 0 1m
+     5:  D2 0 a DiodaSi
+     6:  D3 0 c DiodaSi
+     7:  D4 c b DiodaSi
+     8:  .Model DiodaSi D tt = 1e-9
+     9:  Vin a c DC 5 sin(0 10 50 0 0)
+    10:  	
+    11:  .tran 1e-9 60e-3
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-9
+	Final time .......... : 60e-3
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 536
+	Number of iterations for transient analysis....: 529
+	Total number of timepoints.....................: 151
+	Number of timepoints accepted..................: 122
+	Number of timepoints rejected..................: 29
+	Total analysis time (sec)......................: 0.023
+	Transient analysis time (sec)..................: 0.021
+	Time spent in device loading (sec).............: 0
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: Filter rectifier
+
+

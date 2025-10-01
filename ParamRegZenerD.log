@@ -1,0 +1,69 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *         Professional Version 2020.100           *
+                 *                                           *
+                 *********************************************
+
+	Date: Tue Oct 22 10:48:55 2024
+	Circuit File: C:\Users\admin\OneDrive\Documents\ParamRegZenerD.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  Parametric regulator with Zener diode
+     2:  D1 a b DiodaSi
+     3:  R b 0 100
+     4:  C b 0 1m
+     5:  D2 0 a DiodaSi
+     6:  D3 0 c DiodaSi
+     7:  D4 c b DiodaSi
+     8:  D5 0 b Zener
+     9:  .Model DiodaSi D tt = 1e-9
+    10:  .Model Zener D bv=6.8
+    11:  Vin a c DC 5 sin(0 10 50 0 0)
+    12:  
+    13:  .tran 1e-9 60e-3
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-9
+	Final time .......... : 60e-3
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 1285
+	Number of iterations for transient analysis....: 1275
+	Total number of timepoints.....................: 355
+	Number of timepoints accepted..................: 279
+	Number of timepoints rejected..................: 76
+	Total analysis time (sec)......................: 0.02
+	Transient analysis time (sec)..................: 0.018
+	Time spent in device loading (sec).............: 0.002
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: Parametric regulator with Zener diode
+
+

@@ -1,0 +1,69 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *         Professional Version 2020.100           *
+                 *                                           *
+                 *********************************************
+
+	Date: Tue Nov  5 11:19:19 2024
+	Circuit File: C:\Users\admin\OneDrive\Documents\tran.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  TRANSIS
+     2:  R1 a b 1k
+     3:  R2 ec out 1k
+     4:  RB eb b 7k
+     5:  C1 a b 75p
+     6:  C2 out 0 1p
+     7:  Q1 out b 0 tranz
+     8:  .model tranz npn tr=5e-9 tf=8e-9
+     9:  Vin a 0 DC 0 pulse(0 5 0 1e-9 1e-9 1e-7 2e-7)
+    10:  VE ec 0 DC 5v
+    11:  VB eb b DC -1V
+    12:  
+    13:  .tran 1e-9 6e-7
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-9
+	Final time .......... : 6e-7
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 747
+	Number of iterations for transient analysis....: 742
+	Total number of timepoints.....................: 233
+	Number of timepoints accepted..................: 196
+	Number of timepoints rejected..................: 37
+	Total analysis time (sec)......................: 0.027
+	Transient analysis time (sec)..................: 0.022
+	Time spent in device loading (sec).............: 0.002
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: TRANSIS
+
+

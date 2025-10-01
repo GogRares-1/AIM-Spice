@@ -1,0 +1,68 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *         Professional Version 2020.100           *
+                 *                                           *
+                 *********************************************
+
+	Date: Tue Nov 19 11:18:46 2024
+	Circuit File: C:\Users\admin\OneDrive\Documents\lab7.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  NMOS
+     2:  !
+     3:  .model t1 nmos vto=1.5
+     4:  .model t2 nmos vto=2.5
+     5:  !
+     6:  VGG g 0 7.5
+     7:  VDD d 0 5
+     8:  VIN in 0 DC pulse(0 5 0 1e-10 1e-10 1e-9 2e-9)
+     9:  !
+    10:  m1 OUT in 0 0 t1 l=1u W=1u
+    11:  m2 d g OUT OUT t2 l=10u W=1u
+    12:  .tran 1e-10 6e-9
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-10
+	Final time .......... : 6e-9
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 318
+	Number of iterations for transient analysis....: 307
+	Total number of timepoints.....................: 95
+	Number of timepoints accepted..................: 95
+	Number of timepoints rejected..................: 0
+	Total analysis time (sec)......................: 0.01
+	Transient analysis time (sec)..................: 0.009
+	Time spent in device loading (sec).............: 0
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: NMOS
+
+

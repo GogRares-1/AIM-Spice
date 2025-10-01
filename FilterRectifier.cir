@@ -1,0 +1,22 @@
+[aimspice]
+[description]
+163
+Filter rectifier
+D1 a b DiodaSi
+R b 0 100
+C b 0 1m
+D2 0 a DiodaSi
+D3 0 c DiodaSi
+D4 c b DiodaSi
+.Model DiodaSi D tt = 1e-9
+Vin a c DC 5 sin(0 10 50 0 0)
+	
+[tran]
+1e-9
+60e-3
+X
+X
+0
+[ana]
+4 0
+[end]

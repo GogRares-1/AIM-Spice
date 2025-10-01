@@ -1,0 +1,81 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *         Professional Version 2020.100           *
+                 *                                           *
+                 *********************************************
+
+	Date: Tue Nov 12 11:50:47 2024
+	Circuit File: C:\Users\admin\OneDrive\Documents\NAND.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  NAND
+     2:  R1 b a 4k
+     3:  R2 a c2 1600
+     4:  R3 e2 0 3k
+     5:  R4 a c3 130
+     6:  !
+     7:  Q11 b2 b a1 tranz 
+     8:  Q12 b2 b b1 tranz
+     9:  Q2 c2 b2 e2 tranz
+    10:  Q3 c3 c2 c4 tranz
+    11:  Q4 c4 e2 e4 tranz
+    12:  !
+    13:  D1 a1 0 DiodeSi
+    14:  D2 b1 0 DiodeSi
+    15:  D3 e3 c4 DiodeSi
+    16:  !
+    17:  C e4 0 1p
+    18:  !
+    19:  VA a1 0 DC 5 PULSE (0 5 0 1e-9 1e-9 1e-6 2e-6)
+    20:  VB b1 0 DC 5
+    21:  VCC a 0 DC 5
+    22:  .model tranz npn tr=5e-9 tf=8e-9
+    23:  .model DiodeSi D tt=5e-9
+    24:  .tran 1e-9  6e-6
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-9 
+	Final time .......... : 6e-6
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 3770
+	Number of iterations for transient analysis....: 3725
+	Total number of timepoints.....................: 1095
+	Number of timepoints accepted..................: 915
+	Number of timepoints rejected..................: 180
+	Total analysis time (sec)......................: 0.089
+	Transient analysis time (sec)..................: 0.085
+	Time spent in device loading (sec).............: 0.012
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: NAND
+
+Warning: Node e3 has less than two connections
+

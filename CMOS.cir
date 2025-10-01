@@ -1,0 +1,35 @@
+[aimspice]
+[description]
+220
+CMOS
+Vdd dd 0 DC 5
+Vss ss 0 DC 0
+Vin a 0 DC pulse(0 5 0 1e-10 1e-10 1e-6 2e-6)
+!
+mp out a dd dd cmos2 l=10u w=1u
+mn out a ss ss cmos l=10u w=1u
+C out 0 0.1p
+!
+.model cmos nmos vto=1.5
+.model cmos2 pmos vto=-1.5
+[dc]
+1
+Vin
+0
+5
+0.1
+[tran]
+1e-9
+6e-6
+X
+X
+0
+[ana]
+1 1
+0
+1 1
+1 1 -1 6
+2
+vin
+v(out)
+[end]
